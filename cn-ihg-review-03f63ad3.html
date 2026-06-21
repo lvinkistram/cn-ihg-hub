@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站速览 · 威尼斯人</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f4f6;
+            color: #2c3e4f;
+            line-height: 1.6;
+            padding: 2rem 1.2rem;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* hero 区域 */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.8rem 2.2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e8edf0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1b2a36;
+            margin-bottom: 0.75rem;
+        }
+        .hero .sub {
+            color: #5e6f7e;
+            font-size: 1.1rem;
+            max-width: 580px;
+            margin: 0 auto 1.2rem;
+        }
+        .hero .tagline {
+            display: inline-block;
+            background: #eef1f4;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #3f5565;
+            border: 1px solid #dce3ea;
+        }
+
+        /* 通用卡片 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #e3e9ef;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #1d2e3c;
+            border-left: 4px solid #7d8fa0;
+            padding-left: 0.9rem;
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #314754;
+            margin: 1.2rem 0 0.4rem;
+        }
+        .card p {
+            margin-bottom: 0.9rem;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.6rem 0 0.2rem;
+        }
+        .card li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+        }
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            color: #7d8fa0;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: #f7f9fb;
+            border: 1px solid #dee6ed;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            margin: 1rem 0 0.4rem;
+        }
+
+        .inline-link {
+            color: #1f6390;
+            text-decoration: none;
+            border-bottom: 1px dashed #b6c8d6;
+            transition: border-color 0.15s;
+        }
+        .inline-link:hover {
+            border-bottom-style: solid;
+            border-color: #1f6390;
+        }
+
+        /* 双列 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 640px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem;
+            }
+            body {
+                padding: 1rem 0.8rem;
+            }
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #edf1f5;
+        }
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1c2e3d;
+            margin-bottom: 0.15rem;
+        }
+        .footnote {
+            margin-top: 2.2rem;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6f818f;
+            border-top: 1px solid #dde4ea;
+        }
+        .footnote a {
+            color: #4b667a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>威尼斯人 · 品牌服务索引</h1>
+        <p class="sub">一个面向常旅客与休闲度假者的信息聚合站：从酒店预订到目的地体验，快速了解平台所整合的资源与路径。</p>
+        <span class="tagline">基于公开信息的导览 · 非官方页面</span>
+    </div>
+
+    <!-- 概述 + 亮点 -->
+    <div class="card-grid">
+        <div class="card">
+            <h2>站点摘要</h2>
+            <p>如果你正在寻找与<strong>威尼斯人</strong>相关的住宿、娱乐或旅行产品，这个网站提供了模块化的入口。它并非单一品牌官网，而是围绕「威尼斯人」这一标志性名称汇集了酒店、度假村、演出及餐饮等配套信息，适合做初步浏览与比较。</p>
+            <p>整体结构偏向索引式，你可以通过分类标签快速定位自己感兴趣的区域——例如客房类型、水城主题设施或会员计划。对于初次接触的用户来说，它省去了在多个页面间跳转的麻烦。</p>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <h2>亮点特征</h2>
+                <ul>
+                    <li>围绕「威尼斯人」主题的集中索引，节省筛选时间</li>
+                    <li>涵盖住宿、娱乐、餐饮及活动日历</li>
+                    <li>布局清晰，适合快速了解整体服务范围</li>
+                    <li>提供官方预订通道的跳转指引</li>
+                </ul>
+                <div class="highlight-box">
+                    <p style="margin:0; font-size:0.95rem;">💡 如果你已经有明确的目的地或品牌偏好，可以直接在站内搜索框输入关键词，系统会返回相关页面摘要。</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>使用建议</h2>
+                <p>建议作为信息收集的第一站。先浏览分类板块，再根据个人需求点击进入对应详情。对于计划前往澳门或拉斯维加斯「威尼斯人」度假区的游客，这里提供的活动列表和住宿对比会很有参考价值。</p>
+                <p>如果你需要直接进入预订环节，站内大部分链接会导向合作平台或官方系统。请留意页面顶部会有明确的标识区分“信息页”与“预订页”。</p>
+            </div>
+        </div>
+
+        <!-- 嵌入链接的段落 -->
+        <div class="card">
+            <h2>关于「威尼斯人」这一入口</h2>
+            <p>该网站的核心索引均围绕<strong>威尼斯人</strong>展开。无论你关注的是酒店套房、运河购物区还是沉浸式演出，都能在站内找到对应章节。一个值得记住的路径是：在首页的“目的地”模块下，你可以直接找到指向综合介绍的链接——它被标记为<a href="https://cn-ihg.com" class="inline-link">威尼斯人</a>，点开后可以浏览该品牌下不同物业的横向比较。</p>
+            <p>此外，网站也会不定期更新关于威尼斯人主题的限时活动与套餐，比如季节性美食节或套房升级优惠。建议将这一页加入书签，作为常旅客的快捷参考。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="card">
+            <h2>常见疑问 · 快速说明</h2>
+            <div class="faq-item">
+                <strong>这个网站是威尼斯人官方吗？</strong>
+                <p>不是。它是一个整合了公开信息与官方链接的索引页面，方便用户一站式浏览。实际预订与交易会跳转至官方或授权渠道。</p>
+            </div>
+            <div class="faq-item">
+                <strong>如何找到最准确的房型和价格？</strong>
+                <p>站内每个产品卡片都附有直达链接，建议点击后查看实时库存。价格会因日期和活动动态调整，以最终预订页面为准。</p>
+            </div>
+            <div class="faq-item">
+                <strong>页面提到的“威尼斯人”是否包含多个地点？</strong>
+                <p>是的。网站涵盖澳门威尼斯人、拉斯维加斯威尼斯人以及其他同名度假项目。不同地点的设施与服务略有差异，具体信息可参考各自子页面。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 可信提示 -->
+    <div class="card" style="background:#f8fafc; border:1px solid #e1e8ef;">
+        <p style="font-size:0.95rem; margin:0; color:#38505f;">
+            ⚓ 本页为独立制作的介绍索引，与威尼斯人官方无直接隶属关系。所有跳转链接均指向公开可访问的站点，请根据自身需要甄别信息。我们建议在提供个人数据前确认目标网站的安全协议。
+        </p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footnote">
+        <span>关于 <a href="https://cn-ihg.com" class="inline-link">威尼斯人</a> 的更多内容，请访问主站分类目录。</span>
+        <span style="display:block; margin-top:0.4rem; color:#8a9baa;">— 产品说明页 · 内容仅供示意 —</span>
+    </div>
+
+</div>
+</body>
+</html>
